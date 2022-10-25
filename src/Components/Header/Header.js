@@ -23,10 +23,11 @@ const Header = () => {
                        </Nav>
                         <Nav className='fs-4'>
                             <NavLink style={navLinkStyle}  to='/'></NavLink>
-                            <NavLink style={navLinkStyle}  to='/home'>Home</NavLink>
-                            <NavLink style={navLinkStyle} to ='/courses'>Courses</NavLink>
+                            <NavLink style={navLinkStyle}  to='/home'>HOME</NavLink>
+                            <NavLink style={navLinkStyle} to ='/courses'>COURSES</NavLink>
                             <NavLink style={navLinkStyle} to ='/faq'>FAQ</NavLink>
-                            <NavLink style={navLinkStyle} to ='/blog'>Blog</NavLink>
+                            <NavLink style={navLinkStyle} to ='/blog'>BLOG</NavLink>
+                            <NavLink style={navLinkStyle} to ='/login'>LOG IN</NavLink>
                         </Nav>
                     </Navbar.Collapse>
                  </Container>

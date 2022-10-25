@@ -7,6 +7,8 @@ import ErrorPage from "./Components/ErrorPage/ErrorPage";
 import Faq from "./Components/Faq/Faq";
 import Home from "./Components/Home/Home";
 import Main from "./Components/Home/Leyout/Main";
+import Login from "./Components/Login/Login";
+import SingleCoures from "./Components/singleCourse/SingleCoures";
 
 function App() {
   const router = createBrowserRouter([
@@ -28,12 +30,20 @@ function App() {
           element: <Courses></Courses>,
         },
         {
+          path:"/courses/:id",
+          element:<SingleCoures></SingleCoures>
+        },
+        {
           path: 'faq',
           element: <Faq></Faq>,
         },
         {
           path: 'blog',
           element:<Blog></Blog>,
+        },
+        {
+          path: 'login',
+          element:<Login></Login>,
         }
 
       ]

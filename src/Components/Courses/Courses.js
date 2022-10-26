@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import CourseCart from '../CourseCart/CourseCart';
+import SiteCard from '../SiteCard/SiteCard';
 import "./Courses.css"
 const Courses = () => {
    
@@ -29,15 +29,7 @@ const Courses = () => {
                     </div>
              </section>
               <section>
-                <div className="side-card">
-                   <h1>Our Topic</h1>
-                  <h3><Link>Angular</Link></h3>
-                   <h3><Link>React</Link></h3>
-                   <h3><Link> Vue.js</Link></h3>
-                   <h3><Link>Ember.js</Link></h3>
-                   <h3><Link>Meteor</Link></h3>
-                   <h3><Link>Mithril</Link></h3>
-                </div>
+                     <SiteCard></SiteCard>
               </section>
         </div>
     );

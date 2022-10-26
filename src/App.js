@@ -5,10 +5,15 @@ import Body from './Components/Body/Body';
 import Courses from './Components/Courses/Courses';
 import ErrorPage from "./Components/ErrorPage/ErrorPage";
 import Faq from "./Components/Faq/Faq";
+import GetPremium from "./Components/GetPremium/GetPremium";
 import Home from "./Components/Home/Home";
 import Main from "./Components/Home/Leyout/Main";
 import Login from "./Components/Login/Login";
+import Register from "./Components/Register/Register";
+import PrivateRoute from "./Components/Router/PrivetRoutes";
 import SingleCoures from "./Components/singleCourse/SingleCoures";
+
+
 
 function App() {
   const router = createBrowserRouter([
@@ -22,11 +27,11 @@ function App() {
           element: <Body></Body>,
         },
         {
-          path:'home',
+          path:'/home',
           element:<Home></Home>
         },
         {
-          path: 'courses',
+          path: '/courses',
           element: <Courses></Courses>,
         },
         {
@@ -42,8 +47,17 @@ function App() {
           element:<Blog></Blog>,
         },
         {
+          path: 'register',
+          element:<Register></Register>,
+        },
+        {
           path: 'login',
           element:<Login></Login>,
+        },
+        
+        {
+          path: '/premium',
+          element:<PrivateRoute><GetPremium /></PrivateRoute>,
         }
 
       ]

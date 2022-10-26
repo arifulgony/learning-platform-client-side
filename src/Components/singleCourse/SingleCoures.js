@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import {useParams} from "react-router-dom"
+import {Link, useParams} from "react-router-dom"
+import SiteCard from '../SiteCard/SiteCard';
 import'./SingleCourse.css'
+import Button from 'react-bootstrap/Button';
 
 const SingleCoures = () => {
 
@@ -17,23 +19,32 @@ const SingleCoures = () => {
     const {title, writer, writerImg, seatsLeft, price, description, benarImg} =courses
     return (
         <>
-           <div className="container">
-            <div className="benar-img">
-                 <img src={benarImg} alt="" />
+          <div className="main-section">
+            <section className='parent'>
+            <div className="container">
+            <div className="">
+                <div className="benar-img">
+                    <img src={benarImg} alt=""/>
+                </div>
+                
+                <h3>{title}</h3>
+                <article>{description}</article>
+                <div className="writer-img d-flex ">
+                    <h4><img src={writerImg} alt="" /> {writer} </h4>
+                </div>
+                <h4>Seats Left :{seatsLeft}</h4>
+                <h4>Price : {price}</h4>
+                <Link to='/premium'>
+                    <Button variant="primary">Get premium access</Button>
+                </Link>
+               
             </div>
-            
-            <h3>{title}</h3>
-            <article>{description}</article>
-            <div className="writer-img d-flex ">
-            <h4><img src={writerImg} alt="" /> {writer} </h4>
-            </div>
-            <h4>Seats Left :{seatsLeft}</h4>
-            <h4>Price : {price}</h4>
-
-            
-
-
            </div>
+            </section>
+            <section>
+                <SiteCard></SiteCard>
+            </section>
+          </div>
         </>
     );
 };

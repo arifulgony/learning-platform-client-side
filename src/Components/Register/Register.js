@@ -58,7 +58,8 @@ const Register = () => {
         setAccepted(event.target.checked)
     }
     return (
-        <Form onSubmit={handleSubmit}>
+      <div className="container">
+          <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Your Name</Form.Label>
                 <Form.Control name="name" type="text" placeholder="Your Name" />
@@ -90,6 +91,7 @@ const Register = () => {
                 {error}
             </Form.Text>
         </Form>
+      </div>
     );
 };
 

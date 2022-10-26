@@ -1,14 +1,13 @@
 import React, { useContext } from 'react';
 import { Image } from 'react-bootstrap';
-import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { FaUser } from 'react-icons/fa';
-import { Link, NavLink } from 'react-router-dom';
+import {  NavLink } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import { AuthContext } from '../contexts/AuthContext/AuthProvider';
 import Toggle from '../Toggle/Toggle';
-
+import './Header.css'
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);
     const navLinkStyle = ({ isActive }) =>{
@@ -26,8 +25,9 @@ const Header = () => {
             .catch(error => console.error(error))
     }
     return (
-        <Navbar collapseOnSelect className='mb-4 py-4 px-5  ' expand="lg" bg="light" variant="light">
-            <Navbar.Brand><h2 className='px-lg-5'>LEARN-JAVASCRIPT</h2></Navbar.Brand>
+        <Navbar collapseOnSelect className='py-3 ' expand="lg">
+            <div className="container">
+            <Navbar.Brand> <h2 className='header-title'>Learn<span>JS</span></h2> </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="me-auto fs-4">
@@ -39,10 +39,10 @@ const Header = () => {
                 </Nav>
                 <Nav className='fs-5'>
                     <>
-                        {/* {
+                        {
                             user?.uid ?
                                 <>
-                                    <span>{user?.displayName}</span>
+                                    {/* <span>{user?.displayName}</span> */}
                                     
                                 </>
                                 :
@@ -51,7 +51,7 @@ const Header = () => {
                                     <NavLink style={navLinkStyle} to='/register'>Register</NavLink>
 
                                 </>
-                        } */}
+                        }
                             </>
                             <NavLink>
                                 {user?.photoURL ?
@@ -70,7 +70,9 @@ const Header = () => {
                 </Nav>
                 <Toggle/>
             </Navbar.Collapse>
-    </Navbar>
+            </div>
+
+         </Navbar>
     );
 };
 

@@ -1,0 +1,22 @@
+
+
+.contain{
+    background-color: #E2D9FD;
+    height: 100vh;
+}
+
+.detail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.details{
+background: #000;
+}
+.details h1{
+    font-size: 50px;
+    font-weight: bold;
+   
+    
+}

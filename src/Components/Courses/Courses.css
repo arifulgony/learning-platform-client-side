@@ -1,6 +1,7 @@
 
-.main-section{
+.main-sectio{
     display: flex;
+    background-color:  #E2D9FD;
     justify-content: space-between;
 } 
 .crouse-section{

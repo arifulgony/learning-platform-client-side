@@ -1,5 +1,4 @@
-.course-cart{
-}
+
 .card-details{
     display: flex;
     justify-content: center;
@@ -9,7 +8,7 @@
     border-top: 1px solid #ddd;
 }
 .course-img img{
-    width: 350px;
-    height: 350px;
+    width: 300px;
+    height: 300px;
 
 }

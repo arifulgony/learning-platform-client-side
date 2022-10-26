@@ -1,9 +1,10 @@
 import React from 'react';
+import Home from '../Home/Home';
 
 const Body = () => {
     return (
         <div>
-            <h1>full page</h1>
+           <Home></Home>
         </div>
     );
 };

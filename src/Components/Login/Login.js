@@ -62,7 +62,8 @@ const Login = () => {
             })
     }
     return (
-        <Form onSubmit={handleSubmit}>
+       <div className="container">
+         <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
                 <Form.Control name="email" type="email" placeholder="Enter email" required />
@@ -86,6 +87,7 @@ const Login = () => {
                 {error}
             </Form.Text>
         </Form>
+       </div>
     );
 };
 

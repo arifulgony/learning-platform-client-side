@@ -16,7 +16,7 @@ const Courses = () => {
 
 
     return (
-        <div className='main-section '>
+        <div className='main-sectio '>
              <section className='crouse-section '>
                     <div className="container">
                             <div className="row">

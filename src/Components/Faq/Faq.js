@@ -1,10 +1,12 @@
 import React from 'react';
 import { Accordion } from 'react-bootstrap';
+import './Faq.css'
 
 const Faq = () => {
     return (
        <>
-       <div className="container">
+            <div className="main-contain">
+            <div className="container pt-5">
             <Accordion defaultActiveKey="0">
                 <Accordion.Item eventKey="0">
                     <Accordion.Header>Applied Learning Project</Accordion.Header>
@@ -54,6 +56,7 @@ const Faq = () => {
             </Accordion.Item>
             </Accordion>
        </div>
+            </div>
        </>
     );
 };

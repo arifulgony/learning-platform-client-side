@@ -26,7 +26,7 @@ const SingleCoures = () => {
             <section className='parent'>
                     <div className="container">
                     <div className="row">
-                        <div className="col-9">
+                        <div className=" col-xl-9 col-md-9">
                           <div ref={ref} className="">
                                 <div className="writer-img d-flex  my-3">
                                     <h4><img src={writerImg} alt=""/> {writer} </h4>
@@ -50,7 +50,7 @@ const SingleCoures = () => {
                             </div>
                             
                         </div>
-                        <div className="col-3">
+                        <div className="col-xl-3 col-md-3">
                              <section>
                                 <SiteCard></SiteCard>
                             </section>

@@ -6,17 +6,17 @@ import toast from 'react-hot-toast';
 import { useLocation, useNavigate } from 'react-router-dom';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import { FaGoogle, FaGithub} from "react-icons/fa";
-import { GoogleAuthProvider } from 'firebase/auth';
+import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 
 
 
 const Login = () => {
-    const {login, setLoading, providerLogin} = useContext(AuthContext);
+    const {login, setLoading, providerLogin, gitProvider} = useContext(AuthContext);
     const [error, setError] = useState('');
 
 
     const googleProvider = new GoogleAuthProvider()
-
+    const gitPr =new GithubAuthProvider()
     const handleGoogleSignIn = () => {
         providerLogin(googleProvider)
             .then(result => {
@@ -25,6 +25,16 @@ const Login = () => {
             })
             .catch(error => console.error(error))
     }
+    const handleGitSign = () => {
+        gitProvider(gitPr)
+        .then(result => {
+            const user = result.user;
+             toast.success("Wow! Github logged Successfully.");
+            console.log(user)
+        })
+        .catch(error => console.error(error))
+
+     }
 
     const navigate = useNavigate();
     const location = useLocation();
@@ -81,7 +91,7 @@ const Login = () => {
 
             <ButtonGroup vertical>
                 <Button onClick={handleGoogleSignIn} className='mb-2' variant="outline-primary"> <FaGoogle></FaGoogle> Login with Google</Button>
-                <Button variant="outline-dark"> <FaGithub></FaGithub> Login with Github</Button>
+                <Button variant="outline-dark" onClick={handleGitSign}> <FaGithub></FaGithub> Login with Github</Button>
             </ButtonGroup>
             <Form.Text className="text-danger">
                 {error}

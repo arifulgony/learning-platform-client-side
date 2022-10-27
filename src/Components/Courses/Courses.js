@@ -20,14 +20,14 @@ const Courses = () => {
              <section className='crouse-section '>
                     <div className="container">
                             <div className="row">
-                               <div className="col-9">
+                               <div className="col-xl-9 col-md-9">
                                    <div className="card-card">    
                                    {
                                         courses?.map(courses => <CourseCart key={courses.id} courses={courses}></CourseCart>)
                                      }
                                    </div>
                                </div>
-                               <div className="col-3">
+                               <div className="col-xl-3 col-md-3">
                                     <section>
                                             <SiteCard></SiteCard>
                                     </section>

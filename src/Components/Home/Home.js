@@ -1,10 +1,13 @@
 import React from 'react';
 import './Home.css'
 import catun from './catun.png'
+import Fooder from '../Fooder/Fooder';
 
 const Home = () => {
     return (
-        <div className='contain'>
+        <>
+        <div className="benar-section">
+            <div className='container'>
             <section className="benar-section">
              <div className="container-xl container-md">
                 <div className="row">
@@ -23,7 +26,13 @@ const Home = () => {
                 </div>
             </div>
             </section>
+           
         </div>
+        
+        </div>
+                <Fooder></Fooder>
+
+        </>
     );
 };
 

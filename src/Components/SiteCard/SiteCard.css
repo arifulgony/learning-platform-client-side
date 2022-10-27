@@ -18,3 +18,10 @@
  .site-item h3:hover{
     background-color: #6A11CB;
  }
+
+ @media only screen and (min-width:250px) and (max-width:767px){
+   .side-card{
+      padding: 30px;
+     margin-top: 50px;
+   }
+ }

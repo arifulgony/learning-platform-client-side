@@ -10,7 +10,7 @@ const GetPremium = () => {
   const [courses,setCourses] = useState([])
 
   useEffect(()=>{
-      fetch(`http://localhost:5000/course/${params.id}`)
+      fetch(`https://aaaa-two.vercel.app/course/${params.id}`)
       .then(response => response.json())
       .then(json => setCourses(json))
   },[params])

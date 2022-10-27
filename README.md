@@ -1,3 +1,30 @@
+
+
+# Description
+1. Latest React
+2. Coming Soon & 404 Error Page
+3. Bootstrap
+4. react toast
+5. react font awesome
+6. firebase 
+
+
+## Live Link
+Hosted in Netlify ->  https://ephemeral-quokka-d7f45d.netlify.app
+
+## Github code link :
+github code link ->  https://github.com/programming-hero-web-course1/b610-learning-platform-client-side-arifulgony
+github server link -> https://github.com/programming-hero-web-course1/b610-lerning-platform-server-side-arifulgony
+
+
+
+## Other Resources
+Icon -> [Fontawesome](https://fontawesome.com/v5/docs/web/use-with/react)
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

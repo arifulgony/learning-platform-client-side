@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import {Link, useParams} from "react-router-dom"
+import {useNavigate, useParams} from "react-router-dom"
 import SiteCard from '../SiteCard/SiteCard';
 import'./SingleCourse.css';
 import Pdf from "react-to-pdf";
+import { FaDownload} from "react-icons/fa";
 import Fooder from '../Fooder/Fooder';
 
 
@@ -21,7 +22,14 @@ const SingleCoures = () => {
         .then(json => setCourses(json))
     },[params])
 
-    const {title, writer, writerImg, seatsLeft, price, description, benarImg} =courses
+    const {title, writer, writerImg, seatsLeft, price, description, benarImg, id} =courses;
+    const navigate = useNavigate()
+
+
+    const Submit = (id)=>{
+       navigate(`/premium/${id}`)
+    }
+   // console.log(Submit);
     return (
         <>
             <section className='parent'>
@@ -43,11 +51,11 @@ const SingleCoures = () => {
                             </div>
                             <div className="fooder-button">
                                 <Pdf targetRef={ref} filename="code-example.pdf">
-                                    {({ toPdf }) => <button onClick={toPdf} className="download" >DOWNLOSD</button>}
+                                    {({ toPdf }) => <button onClick={toPdf} className="download" ><FaDownload></FaDownload> </button>}
                                 </Pdf>
-                                <Link to='/premium'>
-                                    <button className='download'>Get premium access</button>
-                                </Link>
+                                <div>
+                                    <button className='download'  onClick={()=>Submit(id)}>Get premium access</button>
+                                </div>
                             </div>
                             
                         </div>

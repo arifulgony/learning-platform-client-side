@@ -56,7 +56,7 @@ function App() {
         },
         
         {
-          path: '/premium',
+          path: '/premium/:id',
           element:<PrivateRoute><GetPremium /></PrivateRoute>,
         }
 

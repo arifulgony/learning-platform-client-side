@@ -1,26 +1,43 @@
-import React from 'react';
-import Button from 'react-bootstrap/Button';
+import React, { useEffect, useState } from 'react';
 import Card from 'react-bootstrap/Card';
+import { useParams } from 'react-router-dom';
+import './GetPremium.css'
 
 const GetPremium = () => {
 
+  const params = useParams()
+
+  const [courses,setCourses] = useState([])
+
+  useEffect(()=>{
+      fetch(`http://localhost:5000/course/${params.id}`)
+      .then(response => response.json())
+      .then(json => setCourses(json))
+  },[params])
+
+
+
+  const {title, writer, id} =courses;
   
 
 
     return (
-   <div className="container">
-      <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-   </div>
+          <>
+          <div className="bground">
+          <div className="container pt-5">
+             <Card>
+                  <Card.Header as="h5">{id}</Card.Header>
+                  <Card.Body>
+                    <Card.Title>writer:{title}</Card.Title>
+                    <Card.Text>
+                      {writer}
+                    </Card.Text>
+                    <p className='text-center'>Congratulation</p>
+                  </Card.Body>
+                </Card>
+          </div>
+          </div>
+          </>
     );
 };
 

@@ -20,17 +20,23 @@ const Courses = () => {
              <section className='crouse-section '>
                     <div className="container">
                             <div className="row">
-                                
-                                {
-                                    courses?.map(courses => <CourseCart key={courses.id} courses={courses}></CourseCart>)
-                                }
+                               <div className="col-9">
+                                   <div className="card-card">    
+                                   {
+                                        courses?.map(courses => <CourseCart key={courses.id} courses={courses}></CourseCart>)
+                                     }
+                                   </div>
+                               </div>
+                               <div className="col-3">
+                                    <section>
+                                            <SiteCard></SiteCard>
+                                    </section>
+                               </div>
                             </div>
                     
                     </div>
              </section>
-              <section>
-                     <SiteCard></SiteCard>
-              </section>
+            
         </div>
     );
 };

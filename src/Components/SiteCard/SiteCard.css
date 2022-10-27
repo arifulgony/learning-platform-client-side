@@ -1,6 +1,20 @@
 .side-card{
-    width: 300px;
-    height: 100vh;
     padding: 30px;
-    background-color:#c99ef6;
+    background-color:#b16ff8;
+ }
+ .side-card h1{
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    font-style: italic;
+ }
+ .site-item h3{
+    margin: 10px;
+    color: #fff;
+    padding: 15px 0px;
+    text-align: center;
+    border: 2px solid #924fda;
+ }
+ .site-item h3:hover{
+    background-color: #6A11CB;
  }

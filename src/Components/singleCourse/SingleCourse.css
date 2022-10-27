@@ -1,20 +1,35 @@
-.main-section{
-    display: flex;
-    justify-content: space-between;
-}
 .parent{
-   margin: 0 auto;
+    background-color: #E2D9FD;
+    height: 100vh;
 }
-
 .writer-img img{
     width: 50px;
     height: 50px;
     border-radius: 100%;
      
 }
-
-.benar-img img{
+.benars-img{
+    margin: 0 auto;
+}
+.benars-img img{
     width: 100%;
-    height: 60vh;
+    height: 40vh;
     
+}
+
+.download{
+    background-color: #7b58e2;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #fff;
+}
+.download:hover{
+    background-color: #5238a0;
+}
+
+.fooder-button{
+    display: flex;
+    justify-content: space-between;
 }

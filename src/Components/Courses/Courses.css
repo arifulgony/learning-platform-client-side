@@ -1,9 +1,12 @@
 
 .main-sectio{
-    display: flex;
     background-color:  #E2D9FD;
-    justify-content: space-between;
 } 
 .crouse-section{
     margin: 0 auto;
+}
+
+.card-card{
+    display: flex;
+    flex-wrap: wrap;
 }

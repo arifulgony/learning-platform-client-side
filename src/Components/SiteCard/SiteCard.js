@@ -11,7 +11,7 @@ const SiteCard = () => {
         .then(json => setCourses(json))
     },[])
 
-console.log(courses)
+//console.log(courses)
     
  const navigate = useNavigate()
 
@@ -24,12 +24,14 @@ console.log(courses)
     return (
         <div>
             <div className="side-card">
-                   <h1>Our Topic</h1>
-                               {
+                   <h1>Our Courses</h1>
+                              <div className="site-item">
+                              {
                                     courses?.map(course => <div key={course.id} course={course}>
                                        <h3 onClick={()=>Submit(course.id)}>{course.title}</h3> 
                                     </div>)
                                 }
+                              </div>
                 </div>
         </div>
     );

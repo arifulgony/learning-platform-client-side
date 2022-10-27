@@ -3,7 +3,7 @@ import {Link, useParams} from "react-router-dom"
 import SiteCard from '../SiteCard/SiteCard';
 import'./SingleCourse.css';
 import Pdf from "react-to-pdf";
-import Button from 'react-bootstrap/Button';
+
 
 
 
@@ -23,34 +23,42 @@ const SingleCoures = () => {
     const {title, writer, writerImg, seatsLeft, price, description, benarImg} =courses
     return (
         <>
-          <div className="main-section">
             <section className='parent'>
-            <div className="container">
-            <div ref={ref} className="">
-                 <div className="writer-img d-flex ">
-                    <h4><img src={writerImg} alt="" /> {writer} </h4>
+                    <div className="container">
+                    <div className="row">
+                        <div className="col-9">
+                          <div ref={ref} className="">
+                                <div className="writer-img d-flex  my-3">
+                                    <h4><img src={writerImg} alt=""/> {writer} </h4>
+                                </div>
+                                <div className="benars-img">
+                                    <img src={benarImg} alt=""/>
+                                </div>
+                                
+                                <h3>{title}</h3>
+                                <article>{description}</article>
+                                <h4>Seats Left :{seatsLeft}</h4>
+                                <h4>Price : {price}</h4>
+                            </div>
+                            <div className="fooder-button">
+                                <Pdf targetRef={ref} filename="code-example.pdf">
+                                    {({ toPdf }) => <button onClick={toPdf} className="download" >Generate Pdf</button>}
+                                </Pdf>
+                                <Link to='/premium'>
+                                    <button className='download'>Get premium access</button>
+                                </Link>
+                            </div>
+                            
+                        </div>
+                        <div className="col-3">
+                             <section>
+                                <SiteCard></SiteCard>
+                            </section>
+                        </div>
+                    </div>
                 </div>
-                <div className="benar-img">
-                    <img src={benarImg} alt=""/>
-                </div>
-                
-                <h3>{title}</h3>
-                <article>{description}</article>
-                <h4>Seats Left :{seatsLeft}</h4>
-                <h4>Price : {price}</h4>
-            </div>
-            <Pdf targetRef={ref} filename="code-example.pdf">
-                  {({ toPdf }) => <button onClick={toPdf}>Generate Pdf</button>}
-             </Pdf>
-            <Link to='/premium'>
-                    <Button variant="primary">Get premium access</Button>
-             </Link>
-           </div>
             </section>
-            <section>
-                <SiteCard></SiteCard>
-            </section>
-          </div>
+            
         </>
     );
 };

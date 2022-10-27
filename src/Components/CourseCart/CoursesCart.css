@@ -5,13 +5,17 @@
     align-items: center;
 }
 .ful-card{
-    border: 2px solid red;
+    border: 2px solid #d0a3ff;
+    border-radius: 5px;
+    margin: 0px 50px;
 }
 .course-details{
+    background-color: #fff;
     border-top: 1px solid #ddd;
 }
 .course-img img{
-    width: 300px;
+    width: 337px;
     height: 300px;
+   
 
 }

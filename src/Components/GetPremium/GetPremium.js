@@ -3,8 +3,13 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 const GetPremium = () => {
+
+  
+
+
     return (
-        <Card style={{ width: '18rem' }}>
+   <div className="container">
+      <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src="holder.js/100px180" />
       <Card.Body>
         <Card.Title>Card Title</Card.Title>
@@ -15,6 +20,7 @@ const GetPremium = () => {
         <Button variant="primary">Go somewhere</Button>
       </Card.Body>
     </Card>
+   </div>
     );
 };
 

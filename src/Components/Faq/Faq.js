@@ -1,11 +1,12 @@
 import React from 'react';
 import { Accordion } from 'react-bootstrap';
+import Fooder from '../Fooder/Fooder';
 import './Faq.css'
 
 const Faq = () => {
     return (
        <>
-            <div className="main-contain">
+            <div className="main-contain benar-section">
             <div className="container pt-5">
             <Accordion defaultActiveKey="0">
                 <Accordion.Item eventKey="0">
@@ -41,22 +42,23 @@ const Faq = () => {
                         finish the project(s) to earn your Certificate.
                      </Accordion.Body>
               </Accordion.Item>
-            <Accordion.Item eventKey="3">
-                <Accordion.Header>Earn a Career Credential</Accordion.Header>
-                     <Accordion.Body>
-                        When you complete all of the courses in the program,
-                        you'll earn a Certificate to share with your 
-                        professional network as well as unlock access to 
-                        career support resources to help you kickstart your
-                        new career. Many Professional Certificates have 
-                        hiring partners that recognize the Professional
-                        Certificate credential and others can help prepare
-                         you for a certification exam.
-                    </Accordion.Body>
-            </Accordion.Item>
-            </Accordion>
-       </div>
+                    <Accordion.Item eventKey="3">
+                        <Accordion.Header>Earn a Career Credential</Accordion.Header>
+                            <Accordion.Body>
+                                When you complete all of the courses in the program,
+                                you'll earn a Certificate to share with your 
+                                professional network as well as unlock access to 
+                                career support resources to help you kickstart your
+                                new career. Many Professional Certificates have 
+                                hiring partners that recognize the Professional
+                                Certificate credential and others can help prepare
+                                you for a certification exam.
+                            </Accordion.Body>
+                    </Accordion.Item>
+                    </Accordion>
+                 </div>
             </div>
+            <Fooder></Fooder>
        </>
     );
 };

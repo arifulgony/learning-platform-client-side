@@ -6,9 +6,9 @@ import Fooder from '../Fooder/Fooder';
 const Home = () => {
     return (
         <>
-        <div className="benar-section">
+        <div className="benar-sectio">
             <div className='container'>
-            <section className="benar-section">
+            <section className="">
              <div className="container-xl container-md">
                 <div className="row">
                     <div className="col-xl-6 col-md-6 benar">

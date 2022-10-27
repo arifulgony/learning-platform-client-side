@@ -7,6 +7,9 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import { FaGoogle, FaGithub} from "react-icons/fa";
 import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
+import{Link}from 'react-router-dom';
+import './login.css'
+import Fooder from '../Fooder/Fooder';
 
 
 
@@ -72,25 +75,28 @@ const Login = () => {
             })
     }
     return (
-       <div className="container">
-         <Form onSubmit={handleSubmit}>
+        <>
+        <div className="full-page">
+        <div className="container con">
+         <Form  className='col-xl-3 col-md-3 from' onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Email address</Form.Label>
+                <Form.Label className='text'>Email address</Form.Label>
                 <Form.Control name="email" type="email" placeholder="Enter email" required />
 
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Password</Form.Label>
+                <Form.Label className='text'>Password</Form.Label>
                 <Form.Control name="password" type="password" placeholder="Password" required />
             </Form.Group>
 
             <Button variant="primary" type="submit">
                 Login
-            </Button>
+            </Button><br />
+            <Link to="/register">Create a New Account</Link>
 
-            <ButtonGroup vertical>
-                <Button onClick={handleGoogleSignIn} className='mb-2' variant="outline-primary"> <FaGoogle></FaGoogle> Login with Google</Button>
+            <ButtonGroup vertical className='d-flex mt-3'>
+                <Button onClick={handleGoogleSignIn} className='mb-2' variant="outline-dark"> <FaGoogle></FaGoogle> Login with Google</Button>
                 <Button variant="outline-dark" onClick={handleGitSign}> <FaGithub></FaGithub> Login with Github</Button>
             </ButtonGroup>
             <Form.Text className="text-danger">
@@ -98,6 +104,10 @@ const Login = () => {
             </Form.Text>
         </Form>
        </div>
+        </div>
+        <Fooder></Fooder>
+        </>
+      
     );
 };
 

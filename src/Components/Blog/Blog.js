@@ -1,4 +1,5 @@
 import React from 'react';
+import Fooder from '../Fooder/Fooder';
 import './Blog.css'
 const Blog = () => {
     return (   
@@ -56,6 +57,8 @@ const Blog = () => {
                         </h6>
                     </div>
              </div>
+             <Fooder></Fooder>
+             
             </div>
            );
 };

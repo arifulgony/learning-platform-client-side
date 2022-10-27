@@ -1,0 +1,14 @@
+.full-page{
+    background-color: #E2D9FD;
+    height: 90vh;
+}
+.con{
+    height: 60vh;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.from{
+   
+}

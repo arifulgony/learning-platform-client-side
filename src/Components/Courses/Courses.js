@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import CourseCart from '../CourseCart/CourseCart';
+import Fooder from '../Fooder/Fooder';
 import SiteCard from '../SiteCard/SiteCard';
 import "./Courses.css"
 const Courses = () => {
@@ -16,6 +17,7 @@ const Courses = () => {
 
 
     return (
+        <>
         <div className='main-sectio '>
              <section className='crouse-section '>
                     <div className="container">
@@ -38,6 +40,9 @@ const Courses = () => {
              </section>
             
         </div>
+        <Fooder></Fooder>
+
+        </>
     );
 };
 

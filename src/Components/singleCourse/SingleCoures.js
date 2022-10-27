@@ -3,6 +3,7 @@ import {Link, useParams} from "react-router-dom"
 import SiteCard from '../SiteCard/SiteCard';
 import'./SingleCourse.css';
 import Pdf from "react-to-pdf";
+import Fooder from '../Fooder/Fooder';
 
 
 
@@ -42,7 +43,7 @@ const SingleCoures = () => {
                             </div>
                             <div className="fooder-button">
                                 <Pdf targetRef={ref} filename="code-example.pdf">
-                                    {({ toPdf }) => <button onClick={toPdf} className="download" >Generate Pdf</button>}
+                                    {({ toPdf }) => <button onClick={toPdf} className="download" >DOWNLOSD</button>}
                                 </Pdf>
                                 <Link to='/premium'>
                                     <button className='download'>Get premium access</button>
@@ -58,7 +59,7 @@ const SingleCoures = () => {
                     </div>
                 </div>
             </section>
-            
+            <Fooder></Fooder>
         </>
     );
 };

@@ -25,7 +25,7 @@ const Header = () => {
             .catch(error => console.error(error))
     }
     return (
-        <Navbar collapseOnSelect className='py-3 ' expand="lg">
+        <Navbar collapseOnSelect className='py-3' expand="lg">
             <div className="container">
             <Navbar.Brand> <h2 className='header-title'>Learn<span>JS</span></h2> </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />

@@ -16,7 +16,7 @@ const CourseCart = ({courses}) => {
     return (
      <>
         <div className="col-xl-4 col-lg-4 card-details">
-            <div className='mt-4 card'>
+            <div className='mt-4 ful-card'>
                 <div className='course-img'>
                     <img src={image} alt="" />
                 </div>

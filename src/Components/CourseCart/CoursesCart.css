@@ -4,6 +4,9 @@
     justify-content: center;
     align-items: center;
 }
+.ful-card{
+    border: 2px solid red;
+}
 .course-details{
     border-top: 1px solid #ddd;
 }

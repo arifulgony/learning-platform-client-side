@@ -1,22 +1,46 @@
 
-
-.contain{
+.benar-section{
+    width: 100%;
+    height: 90vh;
     background-color: #E2D9FD;
-    height: 100vh;
 }
-
-.detail{
+.benar-img{
+    width: 100%;
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-.details{
-background: #000;
+.benar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
 }
-.details h1{
+.benar-details{
+
+}
+.benar-details h1{
     font-size: 50px;
-    font-weight: bold;
-   
-    
+    font-weight: 650;
+}
+.benar-details p{
+    font-size: 20px;
+}
+.benar-details button{
+    border: none;
+    margin-top: 20px;
+}
+.benar-details button {
+    text-decoration: none;
+    padding: 15px 40px;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    background-color: #6A27CD;
+}
+.benar-details button:hover{
+    background-color: #4b05b6;
 }

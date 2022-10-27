@@ -1,10 +1,11 @@
 import React from 'react';
-
+import './Blog.css'
 const Blog = () => {
     return (   
-            <div className='container'>
-                <div mx-auto>
-                        <h3 className="text-primary">What is cors?</h3>
+            <div className="main-contain">
+                <div className='container pt-2'>
+                <div className='question'>
+                        <h3 className="question-text">What is cors?</h3>
                             <h6>
                                 localhost server allows to permit user any other place server data
                                 In that preflight,Cors (Cross-Origin Resource Sharing) the browser
@@ -16,8 +17,8 @@ const Blog = () => {
                                 if he can or cannot send the main request to the service.
                             </h6>
                   </div>
-                    <div mx-auto>
-                        <h3 className="text-danger">How does the private route work?</h3>
+                    <div className='question'>
+                        <h3 className="question-text">How does the private route work?</h3>
                         <h6>
                             The current logged in user (authUser) is retrieved from Redux state
                             with a call to the useSelector() hook. Redux is used in this example
@@ -26,8 +27,8 @@ const Blog = () => {
                             or any approach you prefer to get the logged in status of the user.
                         </h6>
                     </div> 
-                    <div mx-auto>
-                        <h3 className="text-danger"> What is Node? How does Node work??</h3>
+                    <div className='question'>
+                        <h3 className="question-text"> What is Node? How does Node work??</h3>
                         <h6>
                             Node.js is a single-threaded, open-source, cross-platform runtime
                             environment for building fast and scalable server-side and
@@ -36,8 +37,8 @@ const Blog = () => {
                             which makes it efficient and suitable for real-time applications.
                         </h6>           
                    </div>
-                    <div mx-auto>
-                        <h3 className="text-danger">
+                    <div className='question'>
+                        <h3 className="question-text">
                             Why are you using firebase? What other options do you have to
                             implement authentication??
                         </h3>
@@ -55,6 +56,7 @@ const Blog = () => {
                         </h6>
                     </div>
              </div>
+            </div>
            );
 };
 
